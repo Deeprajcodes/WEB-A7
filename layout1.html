@@ -3,87 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Layout</title>
+    <title>Document</title>
     <style>
-        *{
+        *,html{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        html{ margin:0;
-        padding: 0;}
         body{
-            text-align: center;
-            background-color: beige;
+            background-color: antiquewhite;
+
         }
-        main{ 
+        main{
             width: 960px;
-            height:1000px;
-            background-color: rgb(211,147,68);
-            margin: 0 auto;
-            padding:0;
-            display:flex;
-            flex-direction: column;
-            gap: 10px;
- }
- header{
-    width: 960px;
-    height: 100px;
-    background-color: #CCC;
- }
- 
- nav{
-    width:960px;
-    height:80px;
-    background-color: #CCC;
-
- }
- section{
-    width: 960px;
-    height:400px ;
-    /* background-color: #CCC; */
-    display:flex;
-    flex-direction: row;
-    column-gap:10px;
-
- }
- #left{
-    flex-grow:1;
-    background-color: #777;
- }
-#right{
-    flex-grow:2 ;
-    background-color:#999;
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-}
-aside,article{
-    background-color: #CCC;
-    height: 50px;
-    flex-grow: 1;
-}
-footer{
-    width: 960px;
-    height: 300px;
-    background-color: #CCC;
-    
-}
+            height: 1000px;
+            margin:0 auto;
+            display: grid;
+            grid-template-columns: 1;
+            grid-template-rows: 100px 80px 400px 300px;
+            gap:10px;
+            text-align: center;
+        }
+        main div{
+            background-color: #CCC;
+            /* align-content: center; */
+        }
+        #section{
+            display: grid;
+            grid-template-columns: 20% 30% 40%;
+            grid-template-rows: 1 ;
+            column-gap: #999;
+            justify-content: space-between;
+        }
+        #section div{
+            background-color: #999;
+        }
     </style>
 </head>
-<body>
-    <main>
-    <header><h2>Hellooooooo</h2></header>
-    <nav>Navbar</nav>
-    <section>
-    <div id="left"></div>
-    <div id="right">
-        <aside><h2>ASIDE</h2></aside>
-        <article><h2>Article</h2></article>
+<body><main>
+    <div><h2>Header</h2></div>
+    <div><h2>Nav</h2></div>
+    <div id="section">
+        <div>box1</div>
+         <div>box2</div>
+          <div>box3</div>
     </div>
-    </section>
-    <footer>
-        <h2>footer</h2>
-    </footer>
+
+    <div><h2>Section</h2></div>
+    <div><h2>Footer</h2></div>
+
 </main>
     
 </body>
