@@ -1,47 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form</title>
-    <style>
-        *,htnl{
-            margin: 0;
-            padding: 0;
-        }
-        #box{
-            width: 400px;
-            height: 900px;
-            background-color: rgb(160, 233, 233);
-            margin: 0px auto;
-            padding: 10px 20px;
-            box-sizing:border-box;
-        }
-    </style>
+<form method="get" autocomplete="on">
 
-</head>
-<body>
-<div id=""box">
-<form>
-    <div>
-        <label>Your Name : </label>
-        <input type="text" placeholder="Enter your name">
-       </div>
-       <div>
-        <label>Your Email : </label>
-        <input type="email" placeholder="Enter your email">
-       </div>
-       <div>
-        <label>Phone number : </label>
-        <input type="tel" placeholder="Enter your phone number">
-       </div>
-       <div>
-        <label>Your DOB : </label>
-        <input type="date">
-       </div>
-       <label>Your gender</label>
-       <input type="radio" name="gender"
-</form></div>
-    
-</body>
-</html>
+    <label>Name:</label>
+    <input type="text" placeholder="write your name">
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" placeholder="write your email">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" placeholder="write your password" minlength="8" 
+  maxlength="20"  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+  title="Password must be 8-20 characters long and include both
+   letters and numbers."
+  required>
+    <br><br>
+
+    <label>Age:</label>
+    <input type="number" placeholder="Enter your age">
+    <br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <br><br>
+
+    <label>Country:</label>
+    <select>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+    </select>
+    <br><br>
+
+    <label>Hobbies:</label>
+    <input type="checkbox" name="hobby" value="reading"> Reading
+    <input type="checkbox" name="hobby" value="traveling"> Traveling
+    <input type="checkbox" name="hobby" value="sports"> Sports
+    <br><br>
+
+    <label>Date:</label>
+    <input type="date">
+    <br><br>
+
+    <label>Time:</label>
+    <input type="time"> 
+    <br><br>
+
+    <label>Color:</label>
+    <input type="color">
+    <br><br>
+
+    <label>File:</label>
+    <input type="file">
+    <br><br>
+
+    <label>About Yourself:</label>
+
+<br>
+
+<textarea
+    rows="5"
+    cols="40"
+    placeholder="Tell us about yourself"></textarea>
+<br><br>
+    <button type="submit">
+        Submit
+    </button>
+    <button type="reset">
+        Reset
+    </button>
+</form>
