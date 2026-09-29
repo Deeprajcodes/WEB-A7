@@ -1,18 +1,21 @@
-.container{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    border: 2px solid black;
-    gap: auto;
-    height: 200px;
-    padding: 10px;
-    flex-wrap: nowrap;
-    
+body {
+    margin: 20px;
 }
-.box{
-    background-color: lightblue;
+
+.flex-container {
+    border: 2px solid black;
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 80px 10px;
+}
+
+.flex-box {
+    background-color: skyblue;
+
     padding: 20px;
-    margin: 5px;
-    width: 400px;
-    height: 20px;
+
+    flex: 1;
 }
