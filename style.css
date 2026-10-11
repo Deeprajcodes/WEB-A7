@@ -1,47 +1,57 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2a90a0;
+    background-color:black;
     color: #333;
 }
 
 header {
     text-align: center;
-    background-color: #242323;
     color: white;
     padding: 30px;
+    font-family:cursive;
+    
 }
-header h1 {
-    font-size: 40px;
+header h2 {
+    font-size: 50px;
     margin-bottom: 10px;
     font-style: italic;
+    font-weight: bold;
 }
 
 header h3 {
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 header img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 40%;
     object-fit: cover;
     margin-top: 20px;
 }
 nav {
+    font-size: 30px;
     text-align: center;
-    background-color: #38ab1f;
+    background-color: yellow;
     padding: 20px;
 }
 nav a {
     color: black;
     text-decoration:underline;
-    margin: 0 15px;
+    margin: 15px;
+    display: inline-block;
     font-weight: bold;
+    transition: 0.3s;
 }
 nav a:hover {
     color: rgb(19, 7, 110);
+    transform: scale(1.1);
+    
+
 }
 section {
+    background-image: url(https://imgs.search.brave.com/9LEsJZty_UgnT-KHedSPN9VyZCJU4G5ijDbR5QaJsUw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8w/Ni8yNC8wNi80NS9i/YWNrZ3JvdW5kLTgx/OTU3N182NDAuanBn);
     background-color:white;
     margin: 15px;
     padding: 20px;
@@ -73,4 +83,47 @@ section {
 }
 .project-card a:hover{
     background-color: #0b2a4a;
+    transform:scale(1.1);
 }
+#me{
+    text-align: justify;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+table,th,td{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    background-color: rgb(211, 220, 228);
+    
+}
+
+#skill{
+    font-size: 20px;
+    display: flex ;
+    gap: 10px;
+    list-style: none;
+    padding:20px;
+    margin: auto;
+    transition: 0.3s;
+    justify-content: center;
+}
+#skill li{
+    color: white;
+    border: 1px solid black;
+    padding:5px;
+    border-radius:8px;
+    background-color:#123c69;
+    }
+    #skill li:hover{
+        background-color: purple;
+        color: black;
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
