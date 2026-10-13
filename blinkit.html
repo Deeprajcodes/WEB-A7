@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +8,44 @@
     <link rel="stylesheet" href="blinkit.css">
 </head>
 <body>
+
     <header>
         <h1 class="logo">blink<span>it</span></h1>
+
         <div class="location">
             <h3>Delivery Location</h3>
-            <p>New Delhi, India</p>
+            <p>Kiet University, U.P.</p>
         </div>
 
         <input type="text" placeholder="Search for products">
 
-        <a href="#login">Login</a>
+        <a href="#login-form" class="login-btn">Login</a>
         <a href="#cart" class="cart">My Cart</a>
     </header>
+
+    <div class="login-popup" id="login-form">
+        <div class="login-box">
+            <a href="#" class="close-btn" aria-label="Close login form">&times;</a>
+
+            <h2>Welcome Back!</h2>
+            <p>Login to your account</p>
+
+            <form action="#" method="get">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" minlength="8" maxlength="15"
+                       placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="login-note">Welcome to Blinkit!</p>
+        </div>
+    </div>
+
     <nav>
         <a href="#categories">Categories</a>
         <a href="#offers">Offers</a>
@@ -26,14 +53,15 @@
     </nav>
 
     <section class="quality">
-        <div>
+        <div class="hero-text">
             <h1>Groceries delivered in minutes!</h1>
             <p>Fresh fruits, vegetables and everyday essentials.</p>
             <a href="#products" class="shop-btn">Shop Now</a>
         </div>
 
         <div class="hero-image">
-        <img src="https://imgs.search.brave.com/dMZoA_Nc09U5IHvYog_xITsXIlT6f_zMxGyV0RY7oFE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY2xvc2V1cC1z/aG9wcGluZy1jYXJ0/LWZpbGxlZC13aXRo/LWRpdmVyc2UtZ3Jv/Y2VyaWVzXzExOTg4/ODQtNTQ1NzYuanBn/P2dhPUdBMS4xLjY4/NzQzNzQxOS4xNzkx/NDg5MDkzJnNlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw">
+            <img src="https://imgs.search.brave.com/dMZoA_Nc09U5IHvYog_xITsXIlT6f_zMxGyV0RY7oFE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY2xvc2V1cC1z/aG9wcGluZy1jYXJ0/LWZpbGxlZC13aXRo/LWRpdmVyc2UtZ3Jv/Y2VyaWVzXzExOTg4/ODQtNTQ1NzYuanBn/P2dhPUdBMS4xLjY4/NzQzNzQxOS4xNzkx/NDg5MDkzJnNlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw"
+                 alt="Shopping cart filled with groceries">
         </div>
     </section>
 
@@ -42,27 +70,42 @@
 
         <div class="category-container">
             <div class="category">
-                <p><img src="https://imgs.search.brave.com/EmIs9spRcKM1us071gXeEiUCDfYCR3ayzRbiE2Vuwo4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/ODUxNjU1NC9waG90/by9mdWxsLWZyYW1l/LW9mLWFzc29ydG1l/bnQtb2YtaGVhbHRo/eS1hbmQtZnJlc2gt/ZnJ1aXRzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz12TXpp/WTVYR1dLRGhfSmhy/c0RHbHd0Y2pxQUFS/TmF6VmpfN2hMLTE0/dWZnPQ"; width="250px" height="200"></p>
+                <p>
+                    <img src="https://imgs.search.brave.com/EmIs9spRcKM1us071gXeEiUCDfYCR3ayzRbiE2Vuwo4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/ODUxNjU1NC9waG90/by9mdWxsLWZyYW1l/LW9mLWFzc29ydG1l/bnQtb2YtaGVhbHRo/eS1hbmQtZnJlc2gt/ZnJ1aXRzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz12TXpp/WTVYR1dLRGhfSmhy/c0RHbHd0Y2pxQUFS/TmF6VmpfN2hMLTE0/dWZnPQ"
+                         alt="Fresh fruits">
+                </p>
                 <h3>Fruits</h3>
             </div>
 
             <div class="category">
-                <p><img src="https://imgs.search.brave.com/NnIgRT1nHBb3mDAVzkmvS61q-FTSmJ1S_Q_jPYXS3vI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNzgv/MzIzLzc3My9zbWFs/bC9kYWlyeS1wcm9k/dWN0cy1tYWRlLW9u/LXRoZS1mYXJtLXVz/aW5nLWZyZXNoLW1p/bGstYW5kLW5hdHVy/YWwtaW5ncmVkaWVu/dHMtZnJlZS1waG90/by5qcGc" width="250px" height="200px"></p>
+                <p>
+                    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&auto=format&fit=crop&q=80"
+                         alt="Dairy products">
+                </p>
                 <h3>Dairy</h3>
             </div>
 
             <div class="category">
-                <p><img src="https://imgs.search.brave.com/n2xJ3mRelO2msIATQmD0MmdmAQSxj0f6oMQ8euKtvQg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDAv/MTcyLzAyMC9zbWFs/bC9haS1nZW5lcmF0/ZWQtYXR0cmFjdGl2/ZS1mb29kLWltYWdl/cy1waG90by5qcGc" width="250px" height="200px"></p>
+                <p>
+                    <img src="https://imgs.search.brave.com/KIcQztpqcgdhls6B2NqBdiZCk4c9CvjXF-E_p9JdKl4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcml0/aHZpZW50ZXJwcmlz/ZXMuY28uaW4vY2Ru/L3Nob3AvZmlsZXMv/c2xpZGluZ19pbWFn/ZV81MzQ0NDlhanBn/XzllOWIxYTlkLWI4/NGQtNGMxNi05ODBk/LTZlMGNhOGRhMDNi/NC5qcGc_dj0xNzQ2/ODEyOTY0JndpZHRo/PTUzMw"
+                         alt="Snacks">
+                </p>
                 <h3>Snacks</h3>
             </div>
 
             <div class="category">
-                <p><img src="https://imgs.search.brave.com/5xGC_FW4pHq0yC2lMgFyxaA11upqNX-2-_lvwsaIemA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjM5/NjM2MTY4L3Bob3Rv/L2NvY2t0YWlscy1k/cmlua3Mtb24tYmFy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1JS3FhemNBeERm/VzZPTjZqQzFRMXI0/WnZKRklJaHBWNUpP/Y1dCSHVEMjNNPQ" width="400px" height="250px"></p>
+                <p>
+                    <img src="https://imgs.search.brave.com/5xGC_FW4pHq0yC2lMgFyxaA11upqNX-2-_lvwsaIemA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjM5/NjM2MTY4L3Bob3Rv/L2NvY2t0YWlscy1k/cmlua3Mtb24tYmFy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1JS3FhemNBeERm/VzZPTjZqQzFRMXI0/WnZKRklJaHBWNUpP/Y1dCSHVEMjNNPQ"
+                         alt="Drinks">
+                </p>
                 <h3>Drinks</h3>
             </div>
 
             <div class="category">
-                <p><img src="https://imgs.search.brave.com/i-0BgTGwlwauJv8yGOBRN-GpKkr6y7fJ8AR2qwCLrNE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY29sbGVjdGlv/bi1jb3NtZXRpYy1z/a2luLWNhcmUtcHJv/ZHVjdHNfMTE2NzA1/NS04MzkuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw" width="400"height="250px"></p>
+                <p>
+                    <img src="https://imgs.search.brave.com/i-0BgTGwlwauJv8yGOBRN-GpKkr6y7fJ8AR2qwCLrNE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY29sbGVjdGlv/bi1jb3NtZXRpYy1z/a2luLWNhcmUtcHJv/ZHVjdHNfMTE2NzA1/NS04MzkuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw"
+                         alt="Personal care products">
+                </p>
                 <h3>Personal Care</h3>
             </div>
         </div>
@@ -84,14 +127,15 @@
         </div>
     </section>
 
-    <!-- Products -->
     <section id="products">
-        <h2 style="font-size: 30px;">Best Sellers</h2>
+        <h2>Best Sellers</h2>
 
         <div class="product-container">
-
             <div class="product-card">
-                <div class="product-image"><img src="https://imgs.search.brave.com/ByzHMNxxQyLgUXAz__jdNYWgsnnV4VPu6YLsA5qf7JM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZmLzJm/LzkwL2ZmMmY5MGQ3/ZGY0YWUzNWJmN2Nh/ZDVhODQ0YWRlZTlh/LmpwZw" width="150px" height="100px";></div><br>
+                <div class="product-image">
+                    <img src="https://imgs.search.brave.com/ByzHMNxxQyLgUXAz__jdNYWgsnnV4VPu6YLsA5qf7JM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZmLzJm/LzkwL2ZmMmY5MGQ3/ZGY0YWUzNWJmN2Nh/ZDVhODQ0YWRlZTlh/LmpwZw"
+                         alt="Bananas">
+                </div>
                 <h3>Banana</h3>
                 <p>1 dozen</p>
                 <h3>₹40</h3>
@@ -99,16 +143,21 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image"><img src="https://imgs.search.brave.com/hbpmkJvJT0nyviACE4AMC6F2htesCRfjaxTqkYzGxuA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODEyODE2TCtIa0wu/anBn" width="150px" height="100px"></div>
+                <div class="product-image">
+                    <img src="https://imgs.search.brave.com/hbpmkJvJT0nyviACE4AMC6F2htesCRfjaxTqkYzGxuA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODEyODE2TCtIa0wu/anBn"
+                         alt="Milk">
+                </div>
                 <h3>Milk</h3>
-        
                 <p>1 litre</p>
                 <h3>₹68</h3>
                 <a href="#cart" class="add-btn">ADD</a>
             </div>
 
             <div class="product-card">
-                <div class="product-image"><img src="https://imgs.search.brave.com/J0jHEwhsDNw0u2oXNtSCSu9PjxeIuxmPgw8pnKfi07A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/OTgzNzMxODIzMDgt/MzI3MDQ5NWQyZjU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UaDhmR3h2WVdZ/bE1qQnZaaVV5TUdK/eVpXRmtmR1Z1ZkRC/OGZEQjhmSHd3" width="150px" height="100px"></div>
+                <div class="product-image">
+                    <img src="https://imgs.search.brave.com/J0jHEwhsDNw0u2oXNtSCSu9PjxeIuxmPgw8pnKfi07A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/OTgzNzMxODIzMDgt/MzI3MDQ5NWQyZjU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UaDhmR3h2WVdZ/bE1qQnZaaVV5TUdK/eVpXRmtmR1Z1ZkRC/OGZEQjhmSHd3"
+                         alt="Bread">
+                </div>
                 <h3>Bread</h3>
                 <p>400 g</p>
                 <h3>₹40</h3>
@@ -116,21 +165,40 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image"><img src="https://imgs.search.brave.com/TefViWUJeexeWJUE5LW0cMDR_W6xZ9WvxOpbXxKw6nE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/My8xMS8wOS8wOC9j/b29raWUtMzIxNjI0/M182NDAuanBn" width="150px" height="100px"></div>
+                <div class="product-image">
+                    <img src="https://imgs.search.brave.com/TefViWUJeexeWJUE5LW0cMDR_W6xZ9WvxOpbXxKw6nE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/My8xMS8wOS8wOC9j/b29raWUtMzIxNjI0/M182NDAuanBn"
+                         alt="Biscuits">
+                </div>
                 <h3>Biscuits</h3>
                 <p>1 pack</p>
                 <h3>₹20</h3>
                 <a href="#cart" class="add-btn">ADD</a>
             </div>
-
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <h2 class="logo">blink<span>it</span></h2><br>
-        Groceries and essentials at your doorstep.
-        <p style="font-weight: bolder;"> About Us | Contact Us | Help</p>
+        <h2 class="logo">blink<span>it</span></h2>
+        <p>Groceries and essentials at your doorstep.</p>
+
+        <details class="about">
+            <summary>About Us</summary>
+
+            <div class="about-info">
+                <p>
+                    <strong>Email:</strong>
+                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=2630btech1488%40kiet.edu"
+                       target="_blank" rel="noopener noreferrer">
+                        2630btech1488@kiet.edu
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Contact:</strong>
+                    <a href="tel:9113884221">9113884221</a>
+                </p>
+            </div>
+        </details>
     </footer>
 
 </body>
